@@ -22,3 +22,9 @@ function solution(year) {
         return 1
     }
 }
+
+// checkPalindrome
+function solution(inputString) {
+    let reversedString = inputString.split('').reverse().join('')
+    return inputString == reversedString ? true : false
+}
