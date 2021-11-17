@@ -65,3 +65,16 @@ function solution(n) {
     
     return prod
 }
+
+// Make Array Consecutive 2
+function solution(statues) {
+    let count = 0
+    let max = Math.max(...statues)
+    let i = Math.min(...statues)
+    
+    for(i; i <= max; i++){
+        statues.includes(i) ? count : count += 1
+    }
+    
+    return count
+}
