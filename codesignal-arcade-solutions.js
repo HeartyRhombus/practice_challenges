@@ -41,3 +41,27 @@ function solution(inputArray) {
     
     return finalProduct
 }
+
+// shapeArea
+function solution(n) {
+    let outerSum
+    let next = n - 1
+    let prod = 0
+
+    if(n > 1){
+        outerSum = n+(n-1)+(n-1)+(n-2)
+    } else {
+        outerSum = 1
+    }
+    
+    if(next > 1){
+        prod = outerSum + solution(n-1)
+    } else if(next == 1){
+        prod = outerSum + 1
+    } else {
+        prod = 1
+    }
+    // console.log(outerSum, next, prod)
+    
+    return prod
+}
